@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cercami Ancora · I tuoi bonus</title>
+<meta name="description" content="I due bonus stampabili di Cercami Ancora: altri bigliettini dei desideri e i biglietti per regalarlo.">
+<meta property="og:title" content="Cercami Ancora · I tuoi bonus">
+<meta property="og:description" content="Due bonus stampabili per chi ha Cercami Ancora, di Marta Delcuore.">
+<meta property="og:image" content="assets/copertina.jpg">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wine:#5A1222; --wine-dark:#3A0A15; --wine-deep:#2A060F;
+  --gold:#C9A46A; --gold-light:#E6CFA0; --cream:#F7EFE3; --paper:#FBF6EE;
+  --ink:#2B1A1A; --muted:#6E5A55;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Lato',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.15}
+.eyebrow{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.heart{color:var(--gold);letter-spacing:.5em;text-align:center;font-size:15px}
+
+/* HERO */
+.hero{background:radial-gradient(ellipse at 70% 20%,#7a1d30 0%,var(--wine) 40%,var(--wine-deep) 100%);color:var(--cream);padding:56px 0 64px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:14px;border:1px solid rgba(201,164,106,.45);outline:1px solid rgba(201,164,106,.25);outline-offset:-6px;pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(38px,6vw,62px);color:var(--gold-light);margin:10px 0 16px}
+.hero p.lead{font-size:19px;color:#f0e2cf;max-width:520px}
+.hero .cover{width:100%;max-width:330px;justify-self:center;border-radius:4px;box-shadow:0 22px 50px rgba(0,0,0,.55),0 0 0 1px rgba(201,164,106,.35);transform:rotate(2deg)}
+.btn{display:inline-block;background:var(--gold);color:var(--wine-deep);font-weight:700;text-decoration:none;padding:15px 28px;border-radius:40px;font-size:16px;letter-spacing:.02em;transition:transform .15s,background .15s;box-shadow:0 6px 18px rgba(0,0,0,.25);border:0;cursor:pointer}
+.btn:hover{background:var(--gold-light);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--wine);border:1.5px solid var(--wine);box-shadow:none}
+.btn.ghost:hover{background:var(--wine);color:var(--cream)}
+.hero .btn{margin-top:26px}
+
+/* SECTIONS */
+section{padding:72px 0}
+.title{text-align:center;margin-bottom:44px}
+.title h2{font-size:clamp(30px,4.5vw,44px);color:var(--wine);margin:8px 0 10px}
+.title p{color:var(--muted);max-width:620px;margin:0 auto}
+
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.step{background:#fff;border:1px solid #ead9c2;border-radius:14px;padding:28px 24px;text-align:center}
+.step .n{width:46px;height:46px;border-radius:50%;background:var(--wine);color:var(--gold-light);font-family:'Cormorant Garamond',serif;font-size:24px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+.step h3{font-size:23px;color:var(--wine);margin-bottom:6px}
+.step p{font-size:15.5px;color:var(--muted)}
+
+/* BONUS */
+.bonus-bg{background:linear-gradient(#f3e7d6,#fbf6ee)}
+.bonus{display:grid;grid-template-columns:230px 1fr;gap:36px;align-items:center;background:#fff;border:1px solid #e3cdae;border-radius:18px;padding:30px;margin-bottom:28px;box-shadow:0 10px 30px rgba(90,18,34,.07)}
+.bonus .thumb{border-radius:6px;box-shadow:0 10px 24px rgba(0,0,0,.18);transform:rotate(-2deg);border:1px solid #e9dcc8}
+.bonus:nth-child(2) .thumb{transform:rotate(2deg)}
+.tag{display:inline-block;background:var(--wine);color:var(--gold-light);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:5px 12px;border-radius:20px}
+.bonus h3{font-size:32px;color:var(--wine);margin:12px 0 4px}
+.bonus .sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:#8a5a3c;margin-bottom:12px}
+.bonus ul{list-style:none;margin:12px 0 22px}
+.bonus li{padding-left:24px;position:relative;margin-bottom:6px;font-size:16px}
+.bonus li::before{content:"♥";position:absolute;left:0;color:var(--gold);font-size:14px;top:1px}
+.meta{font-size:13.5px;color:var(--muted);margin-top:10px}
+
+/* QUOTE BAND */
+.band{background:var(--wine);color:var(--cream);text-align:center;padding:54px 0}
+.band blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(24px,3.6vw,34px);color:var(--gold-light);max-width:760px;margin:0 auto 10px;line-height:1.3}
+.band cite{font-style:normal;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#d9bf94}
+
+/* REVIEW */
+.review{background:#fff;border:1px solid #e3cdae;border-radius:18px;padding:44px 34px;text-align:center;max-width:760px;margin:0 auto}
+.review .stars{color:var(--gold);font-size:28px;letter-spacing:.2em;margin-bottom:8px}
+.review h2{font-size:clamp(28px,4vw,38px);color:var(--wine);margin-bottom:12px}
+.review p{color:var(--muted);margin-bottom:12px}
+.review .btn{margin-top:14px}
+.review .note{font-size:14px;margin-top:18px}
+
+
+/* FORM */
+.formbox{max-width:620px;margin:0 auto;background:#fff;border:1px solid #e3cdae;border-radius:18px;padding:40px 34px;text-align:center;box-shadow:0 14px 40px rgba(90,18,34,.10)}
+.formbox h2{font-size:clamp(30px,4.5vw,40px);color:var(--wine);margin:8px 0 8px}
+.fsub{color:var(--muted);margin-bottom:22px}
+#f{text-align:left;display:grid;gap:14px}
+#f label{font-size:14px;font-weight:700;color:var(--wine);display:grid;gap:6px}
+#f input[type=text],#f input[type=email]{font:inherit;font-weight:400;padding:13px 14px;border:1.5px solid #dcc6a6;border-radius:10px;background:#fffdf9;color:var(--ink)}
+#f input:focus{outline:none;border-color:var(--wine);box-shadow:0 0 0 3px rgba(90,18,34,.12)}
+#f .chk{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:14px;color:var(--muted);line-height:1.45}
+#f .chk input{margin-top:3px;width:18px;height:18px;accent-color:var(--wine);flex:none}
+#f .chk a{color:var(--wine)}
+#f .btn{justify-self:center;margin-top:6px}
+#f .btn[disabled]{opacity:.6;cursor:wait}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.err{color:#a3122b;font-size:14px;text-align:center;min-height:1em}
+@media (max-width:820px){.formbox{padding:30px 20px}}
+
+footer{background:var(--wine-deep);color:#cdb79a;text-align:center;padding:34px 20px;font-size:14px}
+footer .brand{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--gold-light);margin-bottom:6px}
+
+@media (max-width:820px){
+  .hero{padding:44px 0 52px}
+  .hero .wrap{grid-template-columns:1fr;text-align:center;gap:34px}
+  .hero p.lead{margin:0 auto}
+  .hero .cover{max-width:250px;order:-1}
+  .steps{grid-template-columns:1fr}
+  .bonus{grid-template-columns:1fr;text-align:center;padding:26px 20px}
+  .bonus .thumb{max-width:210px;margin:0 auto}
+  .bonus ul{text-align:left;display:inline-block}
+  section{padding:56px 0}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Per chi ha Cercami Ancora</div>
+      <h1>I tuoi due bonus da stampare</h1>
+      <p class="lead">Grazie per aver scelto <em>Cercami Ancora</em>. Qui trovi i due regali che accompagnano il libro: nuovi bigliettini dei desideri da stampare quando volete e i biglietti per regalarlo nel modo giusto.</p>
+      <a class="btn" href="#ricevi">Ricevi i bonus ↓</a>
+    </div>
+    <img class="cover" src="assets/copertina.jpg" alt="Copertina di Cercami Ancora, 50 coupon di coppia piccanti, di Marta Delcuore" width="600" height="900">
+  </div>
+</header>
+
+<!-- ================= COME FUNZIONA ================= -->
+<section>
+  <div class="wrap">
+    <div class="title">
+      <div class="heart">♥ ♥ ♥</div>
+      <h2>Come usarli</h2>
+      <p>Ci vuole meno di un minuto.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Scrivi nome ed email</h3><p>Nel modulo qui sotto. Subito dopo si apre il pulsante per i bonus.</p></div>
+      <div class="step"><div class="n">2</div><h3>Apri la cartella</h3><p>I due PDF sono in una cartella Google Drive: si aprono anche dal telefono.</p></div>
+      <div class="step"><div class="n">3</div><h3>Stampa a casa</h3><p>Fogli A4, stampante normale. I bigliettini si ristampano quando volete.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BONUS ================= -->
+<section id="bonus" class="bonus-bg">
+  <div class="wrap">
+    <div class="title">
+      <div class="eyebrow">Inclusi con il libro</div>
+      <h2>I due bonus</h2>
+    </div>
+
+    <div class="bonus">
+      <img class="thumb" src="assets/bonus1.jpg" alt="Anteprima della pagina dei bigliettini dei desideri" width="496" height="702" loading="lazy">
+      <div>
+        <span class="tag">Bonus 1</span>
+        <h3>Te lo Scrivo, Ogni Volta</h3>
+        <div class="sub">Bigliettini dei desideri da stampare tutte le volte che volete</div>
+        <p>Nel libro ci sono sei bigliettini. Ma i desideri cambiano con le stagioni: qui ne trovate di nuovi, da ristampare ogni volta che una cosa a voce proprio non esce.</p>
+        <ul>
+          <li>8 bigliettini con l'inizio della frase, "Lei scrive a lui" e "Lui scrive a lei"</li>
+          <li>8 bigliettini liberi, per scrivere voi l'inizio</li>
+          <li>Le regole gentili e quando ristamparli</li>
+        </ul>
+        <div class="meta">PDF, 3 pagine A4</div>
+      </div>
+    </div>
+
+    <div class="bonus">
+      <img class="thumb" src="assets/bonus2.jpg" alt="Anteprima dei biglietti da ritagliare per regalare il libro" width="496" height="702" loading="lazy">
+      <div>
+        <span class="tag">Bonus 2</span>
+        <h3>Il Biglietto per Regalarlo</h3>
+        <div class="sub">Perché arrivi come un gioco, non come un rimprovero</div>
+        <p>Il modo in cui consegni il libro conta quanto quello che c'è dentro. Tre idee per regalarlo con leggerezza e i biglietti da mettere sul pacchetto.</p>
+        <ul>
+          <li>3 modi per consegnarlo, con la frase da dire</li>
+          <li>Cosa evitare perché non sembri un messaggio nascosto</li>
+          <li>4 biglietti da ritagliare, uno da scrivere tu</li>
+        </ul>
+        <div class="meta">PDF, 2 pagine A4</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= MODULO ================= -->
+<section id="ricevi">
+  <div class="wrap">
+    <div class="formbox">
+      <div id="modulo">
+        <div class="eyebrow">Ricevi i bonus</div>
+        <h2>Dove ti mando i bonus?</h2>
+        <p class="fsub">Scrivi nome ed email: il pulsante per aprire la cartella dei bonus compare subito qui.</p>
+        <form id="f" novalidate>
+          <label>Nome<input type="text" name="nome" autocomplete="given-name" required maxlength="80"></label>
+          <label>Email<input type="email" name="email" autocomplete="email" required maxlength="160"></label>
+          <input type="text" name="sito" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label class="chk"><input type="checkbox" name="privacy" required> <span>Ho letto l'<a href="privacy.html" target="_blank">informativa privacy</a> e acconsento al trattamento dei miei dati per ricevere i bonus.*</span></label>
+          <label class="chk"><input type="checkbox" name="novita"> <span>Voglio ricevere per email le novità di Marta Delcuore (facoltativo, puoi cancellarti quando vuoi).</span></label>
+          <button class="btn" type="submit" id="invia">Voglio i miei bonus</button>
+          <p class="err" id="err" role="alert"></p>
+        </form>
+      </div>
+      <div id="ok" hidden>
+        <div class="heart">♥ ♥ ♥</div>
+        <h2>Ecco i tuoi bonus</h2>
+        <p class="fsub">Grazie! Apri la cartella e scarica i due PDF. Salva questa pagina tra i preferiti per ritrovarli quando vuoi ristampare i bigliettini.</p>
+        <a class="btn" id="linkbonus" href="#" target="_blank" rel="noopener">Apri la cartella dei bonus</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BAND ================= -->
+<div class="band">
+  <div class="wrap">
+    <blockquote>«Non è un compito. È un invito.»</blockquote>
+    <cite>Cercami Ancora · Marta Delcuore</cite>
+  </div>
+</div>
+
+<!-- ================= RECENSIONE ================= -->
+<section>
+  <div class="wrap">
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <h2>Com'è andata?</h2>
+      <p>Se avete già usato qualche coupon, mi piacerebbe sapere cosa ne pensate. Una recensione su Amazon, anche di due righe, aiuta altre coppie a capire se <em>Cercami Ancora</em> fa per loro.</p>
+      <p>Scrivi quello che pensi davvero: ogni opinione sincera mi aiuta a migliorare il libro.</p>
+      <a class="btn ghost" id="link-recensione" href="#" target="_blank" rel="noopener">Lascia la tua opinione su Amazon</a>
+      <p class="note">I bonus sono tuoi in ogni caso: la recensione non serve per riceverli.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand">Cercami Ancora</div>
+  <div>© 2026 Marta Delcuore · Bonus riservati a chi ha il libro</div>
+</footer>
+
+<script>
+  /* ====== INSERISCI QUI IL LINK DELLA RECENSIONE AMAZON ======
+     Esempio: https://www.amazon.it/review/create-review?asin=XXXXXXXXXX
+     Finché resta vuoto, il pulsante della recensione non viene mostrato. */
+  const LINK_RECENSIONE = "";
+
+  const b = document.getElementById('link-recensione');
+  if (LINK_RECENSIONE) { b.href = LINK_RECENSIONE; } else { b.style.display = 'none'; }
+
+  /* Modulo bonus */
+  const f = document.getElementById('f'), err = document.getElementById('err'), invia = document.getElementById('invia');
+  f.addEventListener('submit', async (ev) => {
+    ev.preventDefault(); err.textContent = '';
+    const dati = { nome: f.nome.value.trim(), email: f.email.value.trim(), privacy: f.privacy.checked, novita: f.novita.checked, sito: f.sito.value };
+    if (!dati.nome) { err.textContent = 'Scrivi il tuo nome.'; return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(dati.email)) { err.textContent = "Controlla l'indirizzo email."; return; }
+    if (!dati.privacy) { err.textContent = "Per ricevere i bonus serve il consenso all'informativa privacy."; return; }
+    invia.disabled = true; invia.textContent = 'Un attimo…';
+    try {
+      const r = await fetch('/api/iscrizione', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(dati) });
+      const j = await r.json();
+      if (!j.ok) throw new Error(j.errore || 'Errore');
+      document.getElementById('linkbonus').href = j.bonus;
+      document.getElementById('modulo').hidden = true;
+      document.getElementById('ok').hidden = false;
+      document.getElementById('ricevi').scrollIntoView({ behavior: 'smooth' });
+    } catch (e) {
+      err.textContent = e.message && e.message !== 'Failed to fetch' ? e.message : 'Qualcosa non ha funzionato. Riprova tra poco.';
+      invia.disabled = false; invia.textContent = 'Voglio i miei bonus';
+    }
+  });
+
+</script>
+</body>
+</html>
